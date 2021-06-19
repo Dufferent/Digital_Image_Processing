@@ -1,0 +1,34 @@
+# 旋转变换
+'''
+旋转矩阵
+    [ cos&, sin&  ,0]
+    [-sin&, cos&  ,0]
+    [    0,    0  ,1]
+旋转变换关系
+    [x y 1]^T = [ cos&, sin&  ,0]  *  [x0 y0 1]^T
+                [-sin&, cos&  ,0]
+                [    0,    0  ,1]
+                
+              = [(x0*cos& + y0*sin&)  (y0*cos&-x0*sin&)   1]^T
+    ^
+    |     p -> (r , &0)
+    |     。    
+    |        。p' -> (r , &)
+    |  
+    |------------->
+    (顺时针)
+    p -> ( r*cos&0, r*sin&0)
+    p'-> ( r*cos(&0-&), r*sin(&0-&) )
+    => 
+    p:
+    {
+        x0 = r*cos&0
+        y0 = r*sin&0
+    }
+
+    p':
+    {
+        x‘ = r*cos(&0-&) = r*(cos&cos&0 + sin&sin&0) = r*cos&cos&0 + r*sin&sin&0 = x0*cos& + y0*sin&
+        y' = r*sin(&0-&) = r*(sin&0cos& - sin&cos&0) = r*sin&0cos& - r*sin&cos&0 = y0*cos& - x0*sin& 
+    }
+'''

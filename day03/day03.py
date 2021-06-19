@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # imshow(A)
     # plt.pyplot.show()
     B = np.array([
-        [1,0.2,0],
+        [1,np.sin(np.pi/4),0],
         [0,1,0]
         ],
         dtype=np.float32
